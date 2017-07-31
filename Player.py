@@ -1,6 +1,7 @@
 class Player:
     def __init__(self, position):
         self.position = position
+        self.gameView = GameView()
 
     def pass_card(self, gamestate):
         """ returns the index of the card to pass """
