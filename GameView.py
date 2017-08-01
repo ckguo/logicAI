@@ -80,6 +80,7 @@ class GameView:
     						pop_indices.append(ind)
     						break_flag = True
     						break
+    	print len(pop_indices)
     	if len(pop_indices) > 0:	
 	    	new_enumerations = []
 	    	pop_ind = 0
@@ -88,6 +89,7 @@ class GameView:
 	    		if ind == next_pop:
 	    			pop_ind += 1
 	    			if pop_ind >= len(pop_indices):
+	    				new_enumerations.extend(self.enumerations[ind+1:])
 	    				break
 	    			continue
 	    		new_enumerations.append(self.enumerations[ind])
